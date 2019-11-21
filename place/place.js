@@ -13,11 +13,11 @@ const getLatLong = async (place) => {
         throw new Error(`No results for the place ${place}`)
     }
     const data = resp.data.Results[0];    
-    const address = data.name;
+    const place = data.name;
     const lat = data.lat;
     const lon = data.lon;
     return {
-        address,
+        place,
         lat,
         lon
     }
