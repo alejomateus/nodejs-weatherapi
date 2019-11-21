@@ -1,4 +1,4 @@
-const axios = require('axios');
+const place = require('./place/place')
 const argv = require('yargs').options({
     address: {
         alias: 'd',
@@ -6,4 +6,4 @@ const argv = require('yargs').options({
         demand: true
     }
 }).argv;
-console.log(argv.address);
+place.getLatLong(argv.address).then(console.log);
